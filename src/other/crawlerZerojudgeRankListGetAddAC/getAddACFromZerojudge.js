@@ -31,6 +31,8 @@ async function getACFromZerojudge() {
   for (let i = 0; i < nameList.length; i++) {
     data.push({ "name": nameList[i], "AC": "0" })
   }
+  
+  data.sort(function compare(a, b){return a.AC - b.AC})
   return data
 }
 
